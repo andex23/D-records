@@ -1,0 +1,486 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-image: url(images/kevin-andre-KjJuHQG02qU-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.767);
+  }
+  
+.container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+nav{
+    width: 100%;
+    height: 80px;
+    background: #090909e5;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+nav .logo{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+nav .logo span{
+    color: #d48d00;
+}
+.logo a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li{
+    list-style: none;
+    margin-left: 60px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+nav ul li a:hover{
+    color: #d49f00;
+}
+nav ul li a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #d49b00;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s;
+}
+nav ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.section .title{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.container .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.content .start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.start img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.start img {
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+  }
+
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+.start h1{
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #f3f3f3;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.start p{
+    font-size: 16px;
+    color:#c9c8c8;
+    font-weight: 500;
+    margin-bottom: 20px;
+    border: #c9c8c8;
+    border-radius: 50px;
+}
+
+.start .btn{
+    display: inline-block;
+    padding: 10px 30px;
+    background: #d42e00;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    transition: .5s;
+}
+.start a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+   
+    letter-spacing: 1px;
+}
+    
+
+.btn:hover{
+    background: #fff;
+    color: #d42e00;
+    
+}
+.btn:hover{
+    background: #fff;
+    color: #d42e00;
+    
+}
+
+
+
+.services .title{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+.container h2{
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #aa8f2f;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 0px;
+    margin-top: 200px;
+}
+ .square{
+    display: block;
+  width: 100px;
+  height: 3px;
+  background: darkred;
+  margin: 20px auto;
+
+ }
+.content .box {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 10px;
+    margin-bottom: 50px;
+    transition: .5s;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #ccc;
+
+}
+.line{
+    display: block;
+    width: 100%;
+    height: 13px;
+    background-color: #aa8f2f;
+    margin-top: 5px;
+}
+.box:hover{
+    transform: translateY(-10px);
+}
+.box img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.about{
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: #aa8f2f;
+    background-color: #312c1da3;
+}
+.about h2{
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #aa8f2f;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 100px;
+    margin-top: 200px;
+    border-radius: 20px;;
+}
+.about .rowone{
+    flex-basis: 50%;
+    float: left;
+
+}
+.rowone img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+.rowtwo{
+    flex-basis: 50%;
+    text-align: right;
+}
+.textabout{ 
+    max-width: 500px;
+    font-size: 16px;
+    margin-right: 100px;
+    display: inline-block;
+    color: aliceblue;
+}
+.textabout h3{
+    font-weight: 100;
+    color: #f3f3f3;
+
+
+}
+.textabout p{
+    font-size: 10px;
+    font-style: italic;
+
+}
+footer {
+    background-color: #040404;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    margin: 0;
+
+  }
+  
+  footer {
+    background-color: #040404;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    margin: 0;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  footer ul li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+  
+  footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: .5s;
+  }
+  
+  footer ul li a:hover {
+    color: #aa8f2f;
+  }
+  
+  @media screen and (max-width: 600px) {
+    
+    .start h1{
+        font-size: 25px;
+    }
+    .start p{
+        font-size: 14px;
+    }
+    .start .btn{
+        font-size: 14px;
+    }
+    .services .title{
+        font-size: 25px;
+    }
+    .container h2{
+        font-size: 20px;
+    }
+    .content .box{
+        max-width: 200px;
+    }
+    .about h2{
+        font-size: 20px;
+    }
+    .textabout{
+        font-size: 14px;
+    }
+    .textabout h3{
+        font-size: 14px;
+    }
+    .textabout p{
+        font-size: 10px;
+    }
+    footer ul li a {
+        font-size: 16px;
+      } 
+  }
+
+    @media screen and (max-width: 768px) {
+        .start h1{
+            font-size: 25px;
+        }
+        .start p{
+            font-size: 14px;
+        }
+        .start .btn{
+            font-size: 14px;
+        }
+        .services .title{
+            font-size: 25px;
+        }
+        .container h2{
+            font-size: 20px;
+        }
+        .content .box{
+            max-width: 200px;
+        }
+        .about h2{
+            font-size: 20px;
+        }
+        .textabout{
+            font-size: 14px;
+        }
+        .textabout h3{
+            font-size: 14px;
+        }
+        .textabout p{
+            font-size: 10px;
+        }
+        footer ul li a {
+            font-size: 16px;
+        } 
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .start h1{
+            font-size: 25px;
+        }
+        .start p{
+            font-size: 14px;
+        }
+        .start .btn{
+            font-size: 14px;
+        }
+        .services .title{
+            font-size: 25px;
+        }
+        .container h2{
+            font-size: 20px;
+        }
+        .content .box{
+            max-width: 200px;
+        }
+        .about h2{
+            font-size: 20px;
+        }
+        .textabout{
+            font-size: 14px;
+        }
+        .textabout h3{
+            font-size: 14px;
+        }
+        .textabout p{
+            font-size: 10px;
+        }
+        footer ul li a {
+            font-size: 16px;
+        } 
+    }
+
+  
+
